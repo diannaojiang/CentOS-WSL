@@ -1,4 +1,4 @@
-name: CI 8-stream
+name: CI 9-stream
 
 on:
   workflow_dispatch:
