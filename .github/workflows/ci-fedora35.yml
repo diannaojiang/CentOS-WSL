@@ -1,4 +1,4 @@
-name: CI 9-stream
+name: CI fedora35
 
 on:
   workflow_dispatch:

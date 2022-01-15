@@ -2,15 +2,15 @@
 
 # Environment variables for the CentOS cloud image
 ARCH="x86_64"
-OS_VER="9-stream"
+OS_VER="35"
 ROOTFS_VER="9-20220107.0"
-ROOTFS_FN="CentOS-Stream-GenericCloud-${ROOTFS_VER}.${ARCH}.qcow2"
-ROOTFS_URL="http://cloud.centos.org/centos/${OS_VER}/${ARCH}/images/${ROOTFS_FN}"
+ROOTFS_FN="Fedora-Cloud-Base-35-1.2.x86_64.qcow2"
+ROOTFS_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/35/Cloud/x86_64/images/Fedora-Cloud-Base-35-1.2.x86_64.qcow2"
 
 # Environment variables for Yuk7's wsldl
 LNCR_BLD="21082800"
 LNCR_ZIP="icons.zip"
-LNCR_NAME="CentOS"
+LNCR_NAME="Fedora"
 LNCR_FN=${LNCR_NAME}.exe
 LNCR_ZIPFN=${LNCR_NAME}${OS_VER}.exe
 LNCR_URL="https://github.com/yuk7/wsldl/releases/download/${LNCR_BLD}/${LNCR_ZIP}"
@@ -82,7 +82,7 @@ mkdir dist
 mv -f ${LNCR_FN} ./out/${LNCR_ZIPFN}
 mv -f rootfs.tar.gz ./out/
 pushd out
-zip ../dist/CentOS${OS_VER}.zip ./*
+zip ../dist/Fedora${OS_VER}.zip ./*
 popd
 
 # Clean up
